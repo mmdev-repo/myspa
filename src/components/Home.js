@@ -2,8 +2,6 @@ import React from 'react'
 import axios from 'axios';
 import updateJwt from '../redux/action';
 import { connect } from "react-redux";
-import CRUDUsers from './CRUDUsers';
-import { Redirect, Route } from 'react-router';
 
 class Home extends React.Component {
   
@@ -15,10 +13,10 @@ class Home extends React.Component {
   authenticate = () => {
        axios.post(`http://localhost:8080/jwts/authenticate`, this.state)
           .then(res => {
-            if (res.status === 200 && this.state.mounted) {
+            if (res.status === 200) {
               const jwt = res.data.jwt;
               updateJwt(jwt);
-              return <Redirect to="/CRUDUsers" component={CRUDUsers} />
+              this.props.history.push("/CRUDUsers");
               
             }
           })

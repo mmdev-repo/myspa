@@ -5,7 +5,7 @@ function reducer(state = initialState, action){
     switch(action.type) {
         case 'MODIFY_JWT' : {
               return {
-                  ... state, 
+                  ...state, 
                   jwt: action.payload
               }
         }
