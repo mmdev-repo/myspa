@@ -2,7 +2,8 @@ import React from 'react'
 import axios from 'axios';
 import updateJwt from '../redux/action';
 import { connect } from "react-redux";
-import { browserHistory } from 'react-router';
+import CRUDUsers from './components/CRUDUsers';
+import { Redirect, Route } from 'react-router';
 
 class Home extends React.Component {
   
@@ -17,9 +18,8 @@ class Home extends React.Component {
             if (res.status === 200 && this.state.mounted) {
               const jwt = res.data.jwt;
               updateJwt(jwt);
-              () => {
-                browserHistory.push('/CRUDUsers');
-              }
+              return<Redirect to="/CRUDUsers" component={CRUDUsers} />
+              
             }
           })
       }

@@ -9,6 +9,7 @@ import CRUDUsers from './components/CRUDUsers';
 import { BrowserRouter } from 'react-router-dom';
 
 
+
  class App extends React.Component {
  
   render() {
@@ -16,9 +17,11 @@ import { BrowserRouter } from 'react-router-dom';
       <div className='container' style={{display: 'flex', justifyContent: 'center'}}>
         <div className='row mt-4'>
            <div className="home-hero-signup text-gray-dark js-signup-form">
-            <BrowserRouter>
+            <BrowserRouter >
+             <div>
                 <Route exact path='/home' component={Home}/>
                 <Route exact path='/CRUDUsers' component={CRUDUsers}/>
+              </div>
              </BrowserRouter>
           </div>
         </div>
