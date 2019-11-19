@@ -16,9 +16,8 @@ class Home extends React.Component {
             if (res.status === 200) {
               const jwt = res.data.jwt;
               updateJwt(jwt);
-              this.props.history.push("/CRUDUsers");
-              
-            }
+              this.props.history.push("/users");
+             }
           })
       }
 

@@ -19,7 +19,7 @@ import { BrowserRouter } from 'react-router-dom';
            <div className="home-hero-signup text-gray-dark js-signup-form">
             <BrowserRouter >
               <Route exact path='/home' component={Home}/>
-              <Route exact path='/CRUDUsers' component={CRUDUsers}/>
+              <Route exact path='/users' component={CRUDUsers}/>
             </BrowserRouter>
           </div>
         </div>
