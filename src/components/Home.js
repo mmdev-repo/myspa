@@ -38,7 +38,7 @@ class Home extends React.Component {
             <input type="text" name="username" id="username"  onChange={this.handleChange} value={this.state.username}
             className="form-control form-control-lg input-block"/>
             <label className="form-label h5" >Email</label>
-            <input type="text" name="email" id="user[email]" 
+            <input type="text" name="email" id="user" 
             className="form-control form-control-lg input-block js-email-notice-trigger"/>
             <label className="form-label h5" >Password</label>
             <input type="password" name="password" id="password" onChange={this.handleChange} value={this.state.password} className="form-control form-control-lg input-block"/>
